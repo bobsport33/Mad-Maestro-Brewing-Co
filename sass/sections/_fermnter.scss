@@ -1,0 +1,11 @@
+.fermenter_img {
+  background-image: linear-gradient(
+      to right bottom,
+      rgba($color-light2, 0.8),
+      rgba($color-tertiary, 0.8)
+    ),
+    url("../../static/img/fermenter.jpg");
+  background-size: cover;
+  background-position: center;
+  height: 40rem;
+}

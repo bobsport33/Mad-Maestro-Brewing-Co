@@ -1,0 +1,56 @@
+.brewery {
+  background-color: $color-primary;
+
+  color: $color-grey-light;
+
+  &__box {
+    width: 70%;
+    margin: 0 auto;
+    padding-bottom: 7rem;
+  }
+
+  &__description {
+    text-align: left;
+    font-size: 2rem;
+  }
+
+  &__location {
+    padding-top: 5rem;
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 3rem;
+
+    @media only screen and (max-width: $bp-small) {
+      display: flex;
+      flex-direction: column;
+    }
+
+    &--heading {
+      font-size: 4rem;
+      padding-bottom: 2rem;
+    }
+
+    &--img {
+      width: 100%;
+      margin-top: 2rem;
+      transition: all 0.3s;
+
+      &:hover {
+        outline: 1.5rem solid $color-light;
+        transform: scale(1.05) translateY(-5px);
+      }
+    }
+
+    &--description {
+      font-size: 1.6rem;
+      margin-top: 2rem;
+    }
+  }
+
+  &__brewery {
+    grid-column: 1 / 2;
+  }
+  &__taproom {
+    grid-column: 2 / 3;
+  }
+}

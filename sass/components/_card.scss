@@ -1,0 +1,83 @@
+.card {
+  position: relative;
+  text-align: center;
+  @media only screen and (max-width: $bp-smallest) {
+    position: static;
+  }
+
+  &__img {
+    width: 100%;
+    position: relative;
+  }
+  &__side {
+    position: absolute;
+    top: 0;
+    left: 0;
+    transform: translate(-50%, 0);
+    perspective: 150rem;
+    -moz-perspective: 150rem;
+
+    transition: all 0.8s ease;
+    backface-visibility: hidden;
+
+    @media only screen and (max-width: $bp-smallest) {
+      position: static;
+      transform: translate(0, 0);
+    }
+
+    &--front {
+      height: 40rem;
+      width: 40rem;
+
+      @media only screen and (max-width: $bp-large) {
+        height: 30rem;
+        width: 30rem;
+      }
+      @media only screen and (max-width: $bp-smallest) {
+        display: none;
+      }
+    }
+    &--back {
+      transform: translate(-50%, 0) rotateY(-180deg);
+      height: 40rem;
+      width: 40rem;
+      background-image: linear-gradient(
+        to right bottom,
+        $color-tertiary,
+        $color-primary
+      );
+      color: $color-light;
+
+      @media only screen and (max-width: $bp-large) {
+        height: 30rem;
+        width: 30rem;
+      }
+      @media only screen and (max-width: $bp-smallest) {
+        transform: translate(0, 0) rotateY(0);
+      }
+    }
+    &--name {
+      padding: 0 1rem;
+      font-size: 2rem;
+      margin-top: 3rem;
+    }
+    &--specs {
+      margin-top: 2rem;
+      font-size: 1.6rem;
+    }
+    &--description {
+      margin-top: 2rem;
+      font-size: 1.4rem;
+      text-align: left;
+      padding: 0 2rem;
+      //   Margin or padding on card, figure out color scheme
+    }
+  }
+
+  &:hover &__side--front {
+    transform: translate(-50%, 0) rotateY(180deg);
+  }
+  &:hover &__side--back {
+    transform: translate(-50%, 0) rotateY(0);
+  }
+}

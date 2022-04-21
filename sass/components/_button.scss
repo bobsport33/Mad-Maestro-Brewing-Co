@@ -1,0 +1,18 @@
+.btn {
+  padding: 1.5rem;
+  border-radius: 10px;
+  background-color: $color-primary;
+  color: $color-light;
+  border: none;
+  box-shadow: 0 1.5rem 3rem rgba($color-black, 0.8);
+  transition: all 0.2s;
+
+  &:hover {
+    cursor: pointer;
+    background-color: $color-tertiary;
+  }
+  &:active {
+    transform: translateY(-1px);
+    box-shadow: 0 0.5rem 1rem rgba($color-black, 0.2);
+  }
+}

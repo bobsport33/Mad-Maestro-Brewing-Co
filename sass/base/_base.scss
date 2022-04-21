@@ -1,0 +1,78 @@
+// Colors
+$color-grey-light: #ecebeb;
+$color-light: #cae8d5;
+$color-light2: #84a9ac;
+$color-light3: #a8a8a8;
+$color-primary: #204051;
+$color-tertiary: #3b6978;
+$color-black: #000000;
+
+//Media Query Screen Sizes
+$bp-large: 1400px;
+$bp-med-large: 1050px;
+$bp-med: 850px;
+$bp-small: 600px;
+$bp-smallest: 475px;
+
+* {
+  margin: 0;
+  padding: 0;
+}
+
+*,
+*::after,
+*::before {
+  box-sizing: inherit;
+}
+
+html {
+  box-sizing: border-box;
+  font-size: 65.5%; //1rem = 10px
+  scroll-behavior: smooth;
+
+  @media only screen and (max-width: $bp-med-large) {
+    font-size: 50%;
+  }
+  @media only screen and (max-width: $bp-smallest) {
+    font-size: 40%;
+  }
+}
+
+body {
+  font-family: "Lato", sans-serif;
+  font-weight: 500;
+  background-color: $color-grey-light;
+  line-height: 1.6;
+}
+
+h1 {
+  font-family: "Noto Serif Display", serif;
+  text-align: center;
+  font-size: 6rem;
+  padding-bottom: 5rem;
+  margin-bottom: 0;
+}
+
+h2 {
+  text-align: center;
+  font-size: 4rem;
+  margin-top: 0;
+  padding-top: 7rem;
+  padding-bottom: 7rem !important;
+}
+
+h3 {
+  text-align: center;
+  font-size: 6rem;
+  padding-top: 5rem;
+}
+
+h4 {
+  font-size: 2.6rem;
+  text-align: center;
+}
+
+ul {
+  margin: 0;
+  padding: 0;
+}
